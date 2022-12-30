@@ -19,11 +19,15 @@
     "@motionone/solid": "^10.15.4",
     "@solid-primitives/keyed": "^1.1.4",
     "astro": "^1.7.2",
+    "gsap": "^3.11.4",
     "motion": "^10.15.3",
     "solid-js": "^1.4.3",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.0.24",
+    "the-new-css-reset": "^1.8.2",
+    "three": "0.136.0"
   },
   "devDependencies": {
+    "@types/three": "0.136.0",
     "sass": "^1.57.1"
   }
 }

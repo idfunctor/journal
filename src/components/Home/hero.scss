@@ -1,6 +1,7 @@
 .HOMEHERO {
-  // height: 100vh;
-  // position: relative;
+  user-select: none;
+  max-width: 100vw;
+  overflow: hidden;
 
   &_hero-title-row {
     padding-top: 4vh;
@@ -16,26 +17,19 @@
     right: 0;
   }
 
-  // &line {
-  //   border-bottom: 1px solid;
-  //   display: block;
-  //   grid-column: 1/-1;
-  // }
-
   .motion-span {
     font-size: 18vw;
     display: inline-block;
   }
 
   .circle {
+    transform: scale(2);
     position: absolute;
-    top: 10%;
-    // transform: translateY(-50%);
-    right: max(5vw, 90px);
-    width: 200px / 2;
+    top: 20vh;
+    right: max(10vw, 140px);
+    width: calc(200px / 2);
     height: 200px;
     border-radius: 50%;
-    /* background: #ccc; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,7 +41,6 @@
       background: url(/me.png);
       background-size: cover;
       border-radius: 50%;
-      /* filter: brightness(1.5) contrast(1.5); */
     }
 
     .text {
@@ -64,24 +57,5 @@
         transform-origin: 0 100px;
       }
     }
-  }
-
-  @keyframes rotateText {
-    0% {
-      transform: rotate(-360deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-
-  .astrx {
-    top: 10px;
-    position: absolute;
-    animation: rotateText 20s linear infinite;
-    top: 50vh;
-    transform: translateY(-50%);
-    width: 22.5vw;
-    min-width: 180px;
   }
 }

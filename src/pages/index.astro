@@ -1,48 +1,68 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
-import { Hero } from '../components/Home/Hero';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import { Hero } from "../components/Home/Hero";
+import { AnimLayer } from "../components/Home/AnimLayer";
+import Bottom from "../components/Home/Bottom.astro";
+import { Kinetic } from "../components/Home/Kinetic";
+import Projects from "../components/Home/Projects.astro";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<!-- <script type="text/javascript" src="/circletype.min.js" /> -->
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<Hero client:load />
-			<div class="intro-text relative my-96 w-full italic">
-				<img class="blackstar-eyes" src="/creatives/blackstar-eyes.svg" />
-				<p class="mx-auto">
-					"The idea that the piece of work is not finished until the audience come to it and add their own interpretation and what the piece of art is about is the grey space in the middle. That grey space in the middle is what the 21st century is going to be about."
-					<span class="quote-credit block mt-4 text-base not-italic">- David Bowie on art & the internet in 1999</span>
-				</p>
-			</div>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <AnimLayer client:only />
+    <Kinetic client:only />
+    <div class="absolute w-full h-full content-layer left-0 top-0">
+      <main>
+        <Hero client:load />
+        <Projects />
+        <div class="intro-text relative mt-48 mb-60 w-full italic" id="bowie-quote">
+          <img
+            class="blackstar-eyes absolute"
+            src="/creatives/blackstar-eyes.svg"
+          />
+          <p class="mx-auto">
+            "The idea that the piece of work is not finished until the audience
+            come to it and add their own interpretation and what the piece of
+            art is about is the grey space in the middle. That grey space in the
+            middle is what the 21st century is going to be about."
+            <span class="quote-credit block mt-4 text-base not-italic"
+              >- David Bowie on art & the internet in 1999</span
+            >
+          </p>
+        </div>
+        <div id="bottom-section">
+          <Bottom />
+        </div>
+      </main>
+      <Footer />
+    </div>
+    <style lang="scss">
+      #bottom-section {
+        height: 75vh;
+      }
+      .intro-text {
+        font-size: 2.6rem;
+
+        .blackstar-eyes {
+          opacity: 0.15;
+        }
+
+        p {
+          max-width: 80vw;
+        }
+
+        .blackstar-eyes {
+          top: -15vh;
+        }
+      }
+    </style>
+  </body>
 </html>
-
-<style lang="scss">
-	.intro-text {
-		font-size: 2.6rem;
-
-		.blackstar-eyes {
-			opacity: 0.15;
-		}
-
-		p {
-			max-width: 80vw;
-		}
-
-		.blackstar-eyes {
-			position: absolute;
-			top: -15vh;
-		}
-	}
-</style>

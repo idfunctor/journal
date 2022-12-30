@@ -2,13 +2,13 @@
 const today = new Date();
 ---
 
-<footer>
-	&copy; {today.getFullYear()} Aviral K. All opinions presented here are my own and do not reflect on the beliefs of my employer. 
+<footer class="app_footer text-xs p-16 text-center relative mt-24">
+	&copy; {today.getFullYear()} Aviral K. All opinions presented here are my own and do not reflect on the beliefs of my employer, my plants, or my cat.
 </footer>
+
 <style>
-	footer {
-		font-size: 0.5rem;
-		padding: 25px;
-		text-align: center;
+	.app_footer {
+		z-index: 999;
+		color: white;
 	}
 </style>

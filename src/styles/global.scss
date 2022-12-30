@@ -1,17 +1,4 @@
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-b {
-	color: rgb(13, 12, 28);
-}
 
-a {
-	color: #101722;
-}
 
 textarea {
 	width: 100%;
@@ -95,6 +82,8 @@ body {
 	line-height: 1.5;
 	color: #444;
 	font-size: 1rem;
+
+	main { padding: 0 2rem; }
 }
 
 h1 {
@@ -111,11 +100,14 @@ h3 {
 
 
 h1, h2, h3 {
+	text-rendering: optimizeLegibility;
+	font-weight: 100;
 	color: #3f3b37;
 	font-family: 'DisplayFont', sans-serif;
 }
 
 h4, h5, h6 {
+	font-weight: 100;
 	font-family: 'DisplayFont', sans-serif;
 }
 
@@ -142,4 +134,24 @@ h1 {
   margin-block-end: unset;
   margin-inline-start: unset;
   margin-inline-end: unset;
+}
+
+.object-layer-one {
+	z-index: 1;
+}
+
+.object-layer-2 {
+	z-index: 2;
+}
+
+.object-layer-3 {
+	z-index: 3;
+}
+
+.object-layer-4 {
+	z-index: 4;
+}
+
+.content-layer {
+	z-index: 5;
 }
