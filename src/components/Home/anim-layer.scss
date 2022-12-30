@@ -1,0 +1,33 @@
+.ANIMLAYER {
+  width: 100%;
+  height: 100%;
+  user-select: none;
+
+  @keyframes rotateText {
+    0% {
+      transform: rotate(-360deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  
+
+  .astrx {
+    transform-origin: center;
+    position: absolute;
+    top: 75vh;
+    width: 18vw;
+    min-width: 180px;
+  }
+
+  .anim-rotate {
+    transform-origin: center center;
+    animation: rotateText 20s linear infinite;
+  }
+}
+
+#threejs-scene {
+  margin: 0 -2rem;
+}

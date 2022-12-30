@@ -1,0 +1,157 @@
+
+
+textarea {
+	width: 100%;
+}
+
+content {
+	line-height: 1.6;
+}
+
+table {
+	width: 100%;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+code {
+	padding: 2px 5px;
+	background-color: #f2f2f2;
+}
+pre {
+	padding: 1rem;
+}
+pre > code {
+	all: unset;
+}
+blockquote {
+	border: 1px solid #999;
+	color: #222;
+	padding: 2px 0px 2px 20px;
+	margin: 0px;
+	font-style: italic;
+}
+
+/* Register our custom font family and tell the browser where to find it. */
+@font-face {
+  font-family: 'DisplayFont';
+  src: url('/fonts/display.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+	font-size: 12px;
+
+	@media only screen and (min-width: 720px) {
+		font-size: 12.5px;
+	}
+
+	@media only screen and (min-width: 1024px) {
+		font-size: 14px;
+	}
+
+	@media only screen and (min-width: 1200px) {
+		font-size: 14.5px;
+	}
+
+	@media only screen and (min-width: 1400px) {
+		font-size: 16px;
+	}
+
+	@media only screen and (min-width: 1920px) {
+		font-size: 18px;
+	}
+}
+
+/*
+  The CSS in this style tag is based off of Bear Blog's default CSS.
+  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
+  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+ */
+body {
+	font-family: 'Victor Mono', monospace;
+	margin: auto;
+	padding: 0 2rem;
+	text-align: left;
+	background-color: #f5f5f5;
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+	line-height: 1.5;
+	color: #444;
+	font-size: 1rem;
+
+	main { padding: 0 2rem; }
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+h2 {
+	font-size: 1.75rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+}
+
+
+h1, h2, h3 {
+	text-rendering: optimizeLegibility;
+	font-weight: 100;
+	color: #3f3b37;
+	font-family: 'DisplayFont', sans-serif;
+}
+
+h4, h5, h6 {
+	font-weight: 100;
+	font-family: 'DisplayFont', sans-serif;
+}
+
+a {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+/* body * {
+	font-family: 'Victor Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-size: inherit;
+} */
+
+.col-end-neg-1 {
+	grid-column-end: -1;
+}
+
+.col-end-14 {
+	grid-column-end: 14;
+}
+
+h1 {
+	margin-block-start: unset;
+  margin-block-end: unset;
+  margin-inline-start: unset;
+  margin-inline-end: unset;
+}
+
+.object-layer-one {
+	z-index: 1;
+}
+
+.object-layer-2 {
+	z-index: 2;
+}
+
+.object-layer-3 {
+	z-index: 3;
+}
+
+.object-layer-4 {
+	z-index: 4;
+}
+
+.content-layer {
+	z-index: 5;
+}

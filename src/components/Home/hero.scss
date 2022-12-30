@@ -1,0 +1,61 @@
+.HOMEHERO {
+  user-select: none;
+  max-width: 100vw;
+  overflow: hidden;
+
+  &_hero-title-row {
+    padding-top: 4vh;
+  }
+
+  .top-text {
+    top: 3.5vh;
+    left: 0;
+  }
+
+  .bottom-text {
+    bottom: 3.5vh;
+    right: 0;
+  }
+
+  .motion-span {
+    font-size: 18vw;
+    display: inline-block;
+  }
+
+  .circle {
+    transform: scale(2);
+    position: absolute;
+    top: 20vh;
+    right: max(10vw, 140px);
+    width: calc(200px / 2);
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .logo {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: url(/me.png);
+      background-size: cover;
+      border-radius: 50%;
+    }
+
+    .text {
+      font-style: italic;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      animation: rotateText 10s linear infinite;
+
+      span {
+        position: absolute;
+        left: 50%;
+        font-size: 1.2rem;
+        transform-origin: 0 100px;
+      }
+    }
+  }
+}
